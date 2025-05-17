@@ -27,7 +27,7 @@ namespace ChatBot.Chat
             try
             {
                 var json = await service.SendMessageAsync(UserMessage.Text);
-                Response.InnerText = json;
+                JsonResponse.InnerText = json;
 
                 using var conn = DbManager.GetConnection();
                 var cmd = conn.CreateCommand();
@@ -41,7 +41,7 @@ namespace ChatBot.Chat
             catch (Exception ex)
             {
                 ErrorLogger.Log(ex);
-                Response.InnerText = "Error: " + ex.Message;
+                JsonResponse.InnerText = "Error: " + ex.Message;
             }
         }
     }

@@ -13,7 +13,7 @@
         </div>
         <asp:Button ID="SendButton" runat="server" Text="Send" CssClass="btn btn-primary" OnClick="SendButton_Click" />
     </form>
-    <pre id="Response" runat="server"></pre>
+    <pre id="JsonResponse" runat="server"></pre>
     <a href="../Admin/Admin.aspx">Admin</a> |
     <a href="../Debug/Debug.aspx">Debug</a>
 </body>

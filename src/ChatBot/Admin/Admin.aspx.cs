@@ -2,11 +2,21 @@ using System;
 using System.Data.SQLite;
 using System.Text;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace ChatBot.Admin
 {
     public partial class Admin : System.Web.UI.Page
     {
+        // Add the control declarations
+        protected TextBox ApiKey;
+        protected TextBox Model;
+        protected TextBox GoogleClientId;
+        protected TextBox GoogleClientSecret;
+        protected TextBox AdminUser;
+        protected TextBox AdminPassword;
+        protected Button SaveButton;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             App_Code.DbManager.Initialize();

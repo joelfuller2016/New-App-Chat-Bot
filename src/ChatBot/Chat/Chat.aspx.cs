@@ -1,12 +1,19 @@
 using System;
 using System.Data.SQLite;
 using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using App_Code;
 
 namespace ChatBot.Chat
 {
     public partial class ChatPage : Page
     {
+        // Add the control declarations
+        protected TextBox UserMessage;
+        protected HtmlGenericControl JsonResponse;
+        protected Button SendButton;
+
         protected async void SendButton_Click(object sender, EventArgs e)
         {
             string apiKey = string.Empty;

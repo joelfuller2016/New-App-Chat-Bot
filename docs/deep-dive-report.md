@@ -74,11 +74,3 @@ Tests exist for database creation and the OpenAI service. Because services are s
 
 The application is a concise demonstration of an OpenAI chat bot in WebForms. With the improvements above—particularly around dependency injection, security hardening and testability—it can evolve into a more maintainable and secure code base.
 
-## Build Notes
-
-The repository targets .NET Framework 4.8 using SDK-style projects. To build on
-non-Windows hosts the project references the `Microsoft.NETFramework.ReferenceAssemblies.net48`
-package and explicitly adds `System.Web`. Because the code uses C# 8 features
-like `using` declarations, `<LangVersion>8.0</LangVersion>` is set in the project
-file. These settings allow the solution to compile with the reference assemblies
-available via NuGet.

@@ -38,7 +38,7 @@ The application follows SOLID principles with small classes:
   injection to improve testability and performance.
 - Add explicit references to `System.Web` so the project builds using
   cross-platform reference assemblies.
-- Set `<LangVersion>8.0</LangVersion>` in the project to compile modern C# syntax on non-Windows hosts.
+
 
 ## Folder Structure
 

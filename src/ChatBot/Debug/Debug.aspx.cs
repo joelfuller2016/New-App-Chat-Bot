@@ -2,12 +2,15 @@ using System;
 using System.Data.SQLite;
 using System.Text;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using App_Code;
 
 namespace ChatBot.Debug
 {
     public partial class DebugPage : Page
     {
+        protected HtmlGenericControl Logs;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             var sb = new StringBuilder();

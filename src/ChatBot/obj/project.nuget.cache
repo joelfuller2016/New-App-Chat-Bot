@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "p5u5wyrT3gk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joelf\\OneDrive\\Joels Files\\Documents\\GitHub\\New-App-Chat-Bot\\src\\ChatBot\\ChatBot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joelf\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.3\\microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\stub.system.data.sqlite.core.netframework\\1.0.115\\stub.system.data.sqlite.core.netframework.1.0.115.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\system.data.sqlite\\1.0.115\\system.data.sqlite.1.0.115.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\system.data.sqlite.core\\1.0.115\\system.data.sqlite.core.1.0.115.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\system.data.sqlite.ef6\\1.0.115\\system.data.sqlite.ef6.1.0.115.nupkg.sha512",
+    "C:\\Users\\joelf\\.nuget\\packages\\system.data.sqlite.linq\\1.0.115\\system.data.sqlite.linq.1.0.115.nupkg.sha512"
+  ],
+  "logs": []
+}

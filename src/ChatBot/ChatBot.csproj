@@ -1,8 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <!-- Enable modern C# syntax such as 'using var' on .NET Framework -->
     <LangVersion>8.0</LangVersion>
+    <!-- Specify that we're a Web Application -->
+    <OutputType>Library</OutputType>
+    <UseIISExpress>true</UseIISExpress>
+    <UseIIS>false</UseIIS>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
   <ItemGroup>
     <!-- Allow building against .NET Framework reference assemblies on any OS -->
@@ -12,5 +17,16 @@
     <Reference Include="System.Web" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.115" />
     <PackageReference Include="Google.Apis.Auth" Version="1.60.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  
+  <!-- Explicitly include web content files -->
+  <ItemGroup>
+    <Content Include="**\*.aspx" />
+    <Content Include="**\*.config" />
+    <Content Include="**\*.asax" />
+    <Compile Include="**\*.cs" />
+    <None Include="**\*.css" />
+    <None Include="**\*.js" />
   </ItemGroup>
 </Project>

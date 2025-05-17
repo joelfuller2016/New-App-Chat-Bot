@@ -9,5 +9,7 @@ This repository contains a minimal sample project for a C# chat bot using the Op
 
 For a detailed plan and folder structure see [docs/project-plan.md](docs/project-plan.md).
 
+> **Build Requirements**: The solution targets **.NET Framework 4.8** and must be built on Windows using Visual Studio or MSBuild. .NET CLI on Linux is insufficient.
+
 > **Note**: The implementation is intentionally lightweight and serves as a starting point. Some parts (e.g. Google OAuth flow) are provided as placeholders.
 

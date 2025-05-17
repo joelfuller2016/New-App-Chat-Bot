@@ -25,6 +25,18 @@ The application follows SOLID principles with small classes:
 - `ErrorLogger` persists application errors.
 - WebForms pages (`.aspx`) interact with these services.
 
+### Proposed Enhancements
+
+- Introduce dedicated repository and service layers to cleanly separate data
+  access from WebForms code-behind.
+- Replace HTTP Basic authentication with a cookie-based approach that leverages
+  the Google OAuth login.
+- Store sensitive values (API key, admin password, Google secrets) in encrypted
+  form and hash passwords with a per-user salt.
+- Include anti-forgery tokens on all admin forms to mitigate CSRF attacks.
+- Centralize HTTP calls via `HttpClient` instances managed by dependency
+  injection to improve testability and performance.
+
 ## Folder Structure
 
 ```

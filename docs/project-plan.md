@@ -39,6 +39,7 @@ The application follows SOLID principles with small classes:
 - Add explicit references to `System.Web` so the project builds using
   cross-platform reference assemblies.
 
+
 ## Folder Structure
 
 ```

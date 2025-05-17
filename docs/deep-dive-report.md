@@ -73,3 +73,4 @@ Tests exist for database creation and the OpenAI service. Because services are s
 ## Conclusion
 
 The application is a concise demonstration of an OpenAI chat bot in WebForms. With the improvements above—particularly around dependency injection, security hardening and testability—it can evolve into a more maintainable and secure code base.
+

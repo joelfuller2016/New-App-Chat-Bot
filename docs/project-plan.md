@@ -6,7 +6,7 @@ This project is a minimal web application built with **ASP.NET WebForms (.NET Fr
 
 ## Goals
 
-1. Self-contained ASP.NET WebForms site targeting .NET Framework 4.8.
+1. Self-contained ASP.NET WebApp site targeting .NET Framework 4.8.
 2. SQLite database automatically created on application start if missing.
 3. Admin panel with configuration for API key, model and Google OAuth credentials.
 4. Admin panel protected via basic authentication.

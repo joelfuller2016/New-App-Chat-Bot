@@ -5,6 +5,9 @@
   <ItemGroup>
     <!-- Allow building against .NET Framework reference assemblies on any OS -->
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="all" />
+    <!-- Explicitly reference System.Web to resolve WebForms types when building
+         against reference assemblies on non-Windows hosts -->
+    <Reference Include="System.Web" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.115" />
     <PackageReference Include="Google.Apis.Auth" Version="1.60.0" />
   </ItemGroup>

@@ -1,5 +1,9 @@
+// Legacy AuthManager - Will be replaced with new implementation
 using System;
 using System.Web;
+using ChatBot.Data;
+using ChatBot.Data.Models;
+using ChatBot.Data.Repositories;
 
 namespace App_Code
 {
@@ -7,17 +11,13 @@ namespace App_Code
     {
         // Simplified Google OAuth redirect using configured client ID
         public static void SignIn(HttpResponse response)
-        {
+        {    
             string clientId = string.Empty;
-            using (var conn = DbManager.GetConnection())
+            var configRepo = new ConfigRepository(new ChatBot.Services.Security.SecurityService());
+            var clientIdConfig = configRepo.GetByKey("GoogleClientId");
+            if (clientIdConfig != null)
             {
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT GoogleClientId FROM Config WHERE Id = 1";
-                using var reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    clientId = reader.GetString(0);
-                }
+                clientId = clientIdConfig.Value;
             }
 
             // TODO: implement full OAuth flow and token handling

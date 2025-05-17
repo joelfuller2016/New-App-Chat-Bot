@@ -1,5 +1,7 @@
+// Legacy ErrorLogger - Redirects to new implementation in ChatBot.Services.Logging namespace
 using System;
-using System.Data.SQLite;
+using ChatBot;
+using ChatBot.Services.Logging;
 
 namespace App_Code
 {
@@ -7,13 +9,9 @@ namespace App_Code
     {
         public static void Log(Exception ex)
         {
-            using var conn = DbManager.GetConnection();
-            var cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO Errors(Message, StackTrace, CreatedAt) VALUES(@m, @s, @c)";
-            cmd.Parameters.AddWithValue("@m", ex.Message);
-            cmd.Parameters.AddWithValue("@s", ex.StackTrace);
-            cmd.Parameters.AddWithValue("@c", DateTime.UtcNow);
-            cmd.ExecuteNonQuery();
+            // Forward to new implementation
+            var errorLogger = DependencyResolver.Resolve<IErrorLogger>();
+            errorLogger.Log(ex);
         }
     }
 }

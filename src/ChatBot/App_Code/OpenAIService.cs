@@ -1,40 +1,28 @@
+// Legacy OpenAIService - Redirects to new implementation in ChatBot.Services.OpenAI namespace
 using System;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
+using ChatBot;
+using ChatBot.Services.OpenAI;
 
 namespace App_Code
 {
     public class OpenAIService
-    {
+    {     
         private readonly string _apiKey;
         private readonly string _model;
+        private readonly IOpenAIService _service;
 
         public OpenAIService(string apiKey, string model)
         {
             _apiKey = apiKey;
             _model = model;
+            _service = DependencyResolver.Resolve<IOpenAIService>();
         }
 
         public async Task<string> SendMessageAsync(string message)
         {
-            using var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
-
-            var payload = new JObject
-            {
-                ["model"] = _model,
-                ["messages"] = new JArray
-                {
-                    new JObject { ["role"] = "user", ["content"] = message }
-                }
-            };
-
-            var content = new StringContent(payload.ToString(), Encoding.UTF8, "application/json");
-            var response = await client.PostAsync("https://api.openai.com/v1/chat/completions", content);
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            // Forward to new implementation
+            return await _service.GetChatCompletionAsync(message, _model);
         }
     }
 }

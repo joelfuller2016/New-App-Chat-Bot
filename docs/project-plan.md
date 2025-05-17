@@ -36,6 +36,8 @@ The application follows SOLID principles with small classes:
 - Include anti-forgery tokens on all admin forms to mitigate CSRF attacks.
 - Centralize HTTP calls via `HttpClient` instances managed by dependency
   injection to improve testability and performance.
+- Add explicit references to `System.Web` so the project builds using
+  cross-platform reference assemblies.
 
 ## Folder Structure
 

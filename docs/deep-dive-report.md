@@ -78,6 +78,18 @@ assemblies are available. The project file sets `<LangVersion>8.0</LangVersion>`
 and explicitly references `System.Web` to resolve WebForms types while enabling
 modern C# syntax.
 
+
+## Recommended Improvements
+
+1. Introduce dependency injection (e.g., SimpleInjector or built‑in .NET DI) so pages depend on interfaces rather than concrete helpers.
+2. Hash admin passwords and encrypt API keys using DPAPI or a similar mechanism.
+3. Replace basic auth with an OAuth‑based login that issues a secure session cookie.
+4. Add anti‑forgery tokens to forms and HTML encode output to mitigate CSRF/XSS.
+5. Use a single static `HttpClient` instance and consider async database access.
+6. Move SQL access into repository classes to separate concerns and aid unit testing.
+7. Expand unit tests with mocks for OpenAI and data repositories.
+
+
 ## Conclusion
 
 The application is a concise demonstration of an OpenAI chat bot in WebForms. With the improvements above—particularly around dependency injection, security hardening and testability—it can evolve into a more maintainable and secure code base.
